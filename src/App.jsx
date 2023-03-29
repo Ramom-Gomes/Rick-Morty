@@ -27,16 +27,20 @@ const LoadPrev = () => {
 }
 
   return (
-    <div>
+    <div className='main'>
       <button onClick={LoadPrev}>voltar</button>
       <button onClick={LoadNext}>proximo</button>
-      {Pessoas.map((item, index) => (
-        <div key={index}>
-          {item.name}
-          {item.status}
-          <img src={item.image} alt="" />
-        </div>
-      ))}
+      <div className='personagens'>
+        {Pessoas.map((item, index) => (
+          <div className='personagemposicao' key={index}>
+              <img src={item.image} alt="" />
+              <div>
+                <h1>{item.name}</h1>
+                {item.status}
+              </div>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
