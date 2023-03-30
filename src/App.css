@@ -12,9 +12,34 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .personagemposicao {
     border: 1px solid black;
     display: flex;
+}
+
+.personagemtitulo {
+    margin-top: 15px;
+}
+
+.posicaostatusespecie {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.personagemstatus, .personagemespecie {
+    font-size: 20px;
+}
+
+.personagemlocal {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.personagemlocalnome {
+    font-size: 20px;
+    margin-bottom: 20px;
 }

@@ -33,10 +33,17 @@ const LoadPrev = () => {
       <div className='personagens'>
         {Pessoas.map((item, index) => (
           <div className='personagemposicao' key={index}>
-              <img src={item.image} alt="" />
+              <img src={item.image} width={250} alt="" />
               <div>
-                <h1>{item.name}</h1>
-                {item.status}
+                <h1 className='personagemtitulo'>{item.name}</h1>
+                <div className='posicaostatusespecie'>
+                  <div className='personagemstatus'>{item.status}-</div>
+                  <div className='personagemespecie'>{item.species}</div>
+                </div>
+                <div className='personagemlocal'>Última localização conhecida:</div>
+                <div className='personagemlocalnome'>{item.location.name}</div>
+                <div className='personagemlocal'>Visto pela primeira vez em:</div>
+                <div className='personagemlocalnome'>{item.origin.name}</div>
               </div>
           </div>
         ))}
