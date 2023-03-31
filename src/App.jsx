@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import SetaDireita from "./images/setadireita.png";
+import SetaEsquerda from "./images/setaesquerda.png";
 
 function App() {
   let [Pessoas, SetPessoas] = useState([]);
@@ -29,8 +31,8 @@ const LoadPrev = () => {
   return (
     <div className='main'>
       <div className='botaoposicao'>
-        <button className='botao' onClick={LoadPrev}>Voltar</button>
-        <button className='botao2' onClick={LoadNext}>Próximo</button>
+        <img src={SetaEsquerda} className='botaoimagem' onClick={LoadPrev} alt="" />
+        <img src={SetaDireita} className='botaoimagem2' onClick={LoadNext} alt="" />
       </div>
       <div className='personagens'>
         {Pessoas.map((item, index) => (
@@ -51,8 +53,8 @@ const LoadPrev = () => {
         ))}
       </div>
       <div className='botaoposicao'>
-        <button className='botao' onClick={LoadPrev}>Voltar</button>
-        <button className='botao2' onClick={LoadNext}>Próximo</button>
+        <img src={SetaEsquerda} className='botaoimagem' onClick={LoadPrev} alt="" />
+        <img src={SetaDireita} className='botaoimagem2' onClick={LoadNext} alt="" />
       </div>
     </div>
   )

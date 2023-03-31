@@ -63,26 +63,22 @@
     justify-content: center;
 }
 
-.botao {
-    background-color: #3c3e44;
-    color: #f5f5f5;
-    margin-right: 15px;
-    width: 70px;
-    height: 40px;
+.botaoimagem {
+    width: 40px;
+    margin-right: 10px;
     margin-top: 10px;
-    font-size: 15px;
     margin-bottom: 20px;
 }
 
-.botao2 {
-    background-color: #3c3e44;
-    color: #f5f5f5;
+.botaoimagem2 {
+    width: 40px;
     margin-left: 15px;
-    width: 70px;
-    height: 40px;
     margin-top: 10px;
-    font-size: 15px;
     margin-bottom: 20px;
+}
+
+.botaoimagem:hover, .botaoimagem2:hover {
+    filter: drop-shadow(0 0 0.4em rgb(255, 255, 255));
 }
 
 @media (max-width:965px) {
