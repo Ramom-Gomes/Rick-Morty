@@ -7,6 +7,7 @@
 
 .main {
     background-color: #272B33;
+    width: 100%;
 }
 
 .personagens {
@@ -82,4 +83,33 @@
     margin-top: 10px;
     font-size: 15px;
     margin-bottom: 20px;
+}
+
+@media (max-width:965px) {
+    .personagens {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 700px;
+    }
+}
+
+@media (max-width:530px) {
+    
+    .personagens {
+        max-width: 300px;
+    }
+    
+    .personagemposicao {
+        flex-direction: column;
+    }
+
+    .image {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+        width: 300px;
+    }
+
+    .personagensmargin {
+        margin: auto;
+    }
 }
