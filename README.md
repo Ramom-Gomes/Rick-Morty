@@ -33,7 +33,7 @@ Link para visualização total do projeto: [VISUALIZAÇÃO](https://cute-arithme
 Primeiro, você deve clonar o projeto na sua máquina, para isso você pode colar o seguinte comando em seu terminal:
 
 ```bash
-  git clone https://github.com/Ramom-Gomes/Rick-Morty
+  git clone https://github.com/Ramom-Gomes/Rick-Morty.git
   cd rick-morty
 ```
 Para instalar as dependências, execute o seguinte comando:
