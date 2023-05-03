@@ -34,7 +34,7 @@ Primeiro, você deve clonar o projeto na sua máquina, para isso você pode cola
 
 ```bash
   git clone https://github.com/Ramom-Gomes/Rick-Morty.git
-  cd rick-morty
+  cd Rick-Morty
 ```
 Para instalar as dependências, execute o seguinte comando:
 
