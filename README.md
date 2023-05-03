@@ -12,8 +12,8 @@ O principal objetivo com este projeto foi praticar e aprender a fazer requisiç�
 Link para visualização total do projeto: [VISUALIZAÇÃO](https://cute-arithmetic-afc5d4.netlify.app/).
 
 <div align="center" display="flex">
-<img src="https://user-images.githubusercontent.com/110055468/235494642-5dfcb2b6-ca92-45b9-adb1-10000c13f0e0.jpeg" width="500px" />
-<img src="https://user-images.githubusercontent.com/110055468/235496245-86a3b650-f067-4d8e-a67c-0ff6ef4f5b2f.jpeg" width="500px" />
+<img src="https://user-images.githubusercontent.com/110055468/235494642-5dfcb2b6-ca92-45b9-adb1-10000c13f0e0.jpeg" width="400px" />
+<img src="https://user-images.githubusercontent.com/110055468/235496245-86a3b650-f067-4d8e-a67c-0ff6ef4f5b2f.jpeg" width="400px" />
 </div>
 
 
