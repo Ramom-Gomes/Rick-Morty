@@ -13,7 +13,7 @@ const initialUrl = "https://rickandmortyapi.com/api/character";
   const Load = async(Url) => {
     let resposta = await fetch(Url);
     let json = await resposta.json();
-    SetPessoas(json.results);
+    SetPessoas(json.results || []);
     SetNext(json.info);
   }
 
@@ -22,11 +22,15 @@ useEffect(() => {
 }, []);
 
 const LoadNext = () => {
-    Load(Next.next)
+  if (Next && Next.next) {
+    Load(Next.next);
+  }
 }
 
 const LoadPrev = () => {
-    Load(Next.prev)
+  if (Next && Next.prev) {
+    Load(Next.prev);
+  }
 }
 
 const handleSearch = (e) => {
@@ -47,8 +51,8 @@ useEffect(() => {
     <div className='main'>
       <input type="text" onChange={handleSearch} value={searchTerm} />
       <div className='botaoposicao'>
-        <img src={SetaEsquerda} className='botaoimagem' onClick={LoadPrev} alt="" />
-        <img src={SetaDireita} className='botaoimagem2' onClick={LoadNext} alt="" />
+        {Next && Next.prev && <img src={SetaEsquerda} className='botaoimagem' onClick={LoadPrev} alt="" />}
+        {Next && Next.next && <img src={SetaDireita} className='botaoimagem2' onClick={LoadNext} alt="" />}
       </div>
       <div className='personagens'>
         {Pessoas.map((item, index) => (
