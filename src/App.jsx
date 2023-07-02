@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import SetaDireita from "./images/setadireita.png";
 import SetaEsquerda from "./images/setaesquerda.png";
+import gifErro from './images/rick.gif';
 
 function App() {
   const [Pessoas, SetPessoas] = useState([]);
@@ -47,6 +48,10 @@ useEffect(() => {
   }
 }, [searchTerm]);
 
+const voltarErro = () => {
+  setSearchTerm("");
+}
+
   return (
     <div className='main'>
       <input type="text" onChange={handleSearch} value={searchTerm} />
@@ -55,7 +60,14 @@ useEffect(() => {
         {Next && Next.next && <img src={SetaDireita} className='botaoimagem2' onClick={LoadNext} alt="" />}
       </div>
       <div className='personagens'>
-        {Pessoas.map((item, index) => (
+      {Pessoas.length === 0 ? (
+        <div className='erro'>
+          <div className='mensagemerro'>Não há personagens com esse nome</div>
+          <img src={gifErro} className='imagemerro' alt="" />
+          <button onClick={voltarErro} className='botaoerro'>Voltar para o inicio</button>
+        </div>
+      ) : (
+        Pessoas.map((item, index) => (
           <div className='personagemposicao' key={index}>
               <img className='image' src={item.image} width={250} alt="" />
               <div className='personagensmargin'>
@@ -70,11 +82,12 @@ useEffect(() => {
                 <div className='personagemlocalnome'>{item.origin.name}</div>
               </div>
           </div>
-        ))}
+        ))
+      )}
       </div>
       <div className='botaoposicao'>
-        <img src={SetaEsquerda} className='botaoimagem' onClick={LoadPrev} alt="" />
-        <img src={SetaDireita} className='botaoimagem2' onClick={LoadNext} alt="" />
+        {Next && Next.prev && <img src={SetaEsquerda} className='botaoimagem' onClick={LoadPrev} alt="" />}
+        {Next && Next.next && <img src={SetaDireita} className='botaoimagem2' onClick={LoadNext} alt="" />}
       </div>
     </div>
   )
