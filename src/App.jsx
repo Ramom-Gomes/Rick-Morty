@@ -64,7 +64,7 @@ const voltarErro = () => {
         <div className='erro'>
           <div className='mensagemerro'>Não há personagens com esse nome</div>
           <img src={gifErro} className='imagemerro' alt="" />
-          <button onClick={voltarErro} className='botaoerro'>Voltar para o inicio</button>
+          <button onClick={voltarErro} className='botaoerro'>Voltar para o início</button>
         </div>
       ) : (
         Pessoas.map((item, index) => (
