@@ -4,8 +4,9 @@ import SetaDireita from "./images/setadireita.png";
 import SetaEsquerda from "./images/setaesquerda.png";
 
 function App() {
-  let [Pessoas, SetPessoas] = useState([]);
-  let [Next,SetNext] = useState([]);
+  const [Pessoas, SetPessoas] = useState([]);
+  const [Next,SetNext] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
 const initialUrl = "https://rickandmortyapi.com/api/character";
 
@@ -28,14 +29,23 @@ const LoadPrev = () => {
     Load(Next.prev)
 }
 
+const handleSearch = (e) => {
+  setSearchTerm(e.target.value);
+}
+
+const filteredPessoas = Pessoas.filter((pessoa) =>
+  pessoa.name.toLowerCase().includes(searchTerm.toLowerCase())
+);
+
   return (
     <div className='main'>
+      <input type="text" onChange={handleSearch} value={searchTerm} />
       <div className='botaoposicao'>
         <img src={SetaEsquerda} className='botaoimagem' onClick={LoadPrev} alt="" />
         <img src={SetaDireita} className='botaoimagem2' onClick={LoadNext} alt="" />
       </div>
       <div className='personagens'>
-        {Pessoas.map((item, index) => (
+        {filteredPessoas.map((item, index) => (
           <div className='personagemposicao' key={index}>
               <img className='image' src={item.image} width={250} alt="" />
               <div className='personagensmargin'>
