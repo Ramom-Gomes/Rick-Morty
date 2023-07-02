@@ -31,11 +31,17 @@ const LoadPrev = () => {
 
 const handleSearch = (e) => {
   setSearchTerm(e.target.value);
+  Load(initialUrl);
 }
 
-const filteredPessoas = Pessoas.filter((pessoa) =>
-  pessoa.name.toLowerCase().includes(searchTerm.toLowerCase())
-);
+useEffect(() => {
+  if (searchTerm.trim() === '') {
+    Load(initialUrl);
+  } else {
+    const filteredUrl = `${initialUrl}?name=${encodeURIComponent(searchTerm)}`;
+    Load(filteredUrl);
+  }
+}, [searchTerm]);
 
   return (
     <div className='main'>
@@ -45,7 +51,7 @@ const filteredPessoas = Pessoas.filter((pessoa) =>
         <img src={SetaDireita} className='botaoimagem2' onClick={LoadNext} alt="" />
       </div>
       <div className='personagens'>
-        {filteredPessoas.map((item, index) => (
+        {Pessoas.map((item, index) => (
           <div className='personagemposicao' key={index}>
               <img className='image' src={item.image} width={250} alt="" />
               <div className='personagensmargin'>
