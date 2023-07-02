@@ -54,8 +54,8 @@ const voltarErro = () => {
 
   return (
     <div className='main'>
-      <input type="text" onChange={handleSearch} value={searchTerm} />
       <div className='botaoposicao'>
+        <input className='buscador' placeholder='Digite o nome do personagem' type="text" onChange={handleSearch} value={searchTerm} />
         {Next && Next.prev && <img src={SetaEsquerda} className='botaoimagem' onClick={LoadPrev} alt="" />}
         {Next && Next.next && <img src={SetaDireita} className='botaoimagem2' onClick={LoadNext} alt="" />}
       </div>
