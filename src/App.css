@@ -5,6 +5,38 @@
     color: #f5f5f5;
 }
 
+.erro {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.mensagemerro {
+    color: #FFF;
+    margin: auto;
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.imagemerro {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.botaoerro {
+    color: #FFF;
+    background-color: #3c3e44;
+    margin: auto;
+    margin-top: 30px;
+    width: 200px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-bottom: 100%;
+}
+
 .main {
     background-color: #272B33;
     width: 100%;
@@ -63,6 +95,21 @@
     justify-content: center;
 }
 
+.buscador {
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    background-color: #3c3e44;
+    color: #FFF;
+    width: 200px;
+    height: 30px;
+}
+
+input::placeholder {
+    color: #FFF;
+    padding: 10px;
+}
+
 .botaoimagem {
     width: 40px;
     margin-right: 10px;
@@ -107,5 +154,10 @@
 
     .personagensmargin {
         margin: auto;
+    }
+
+    .imagemerro {
+        width: 300px;
+        height: 300px;
     }
 }
