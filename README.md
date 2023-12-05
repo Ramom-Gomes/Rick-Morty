@@ -3,7 +3,7 @@
 
 # Rick and Morty
 
-### Rick and Morty foi desenvolvido para você conseguir visualizar e pesquisar os personagens que já apareceram nesse desenho animado. Para você conseguir visualizar os personagens e as suas informações como o nome, a espécie, primeiro lugar que apareceu e mais outras informações. O principal objetivo com esse projeto foi praticar e aprimorar minhas habilidade com requisições a APIs externas. Para obter os dados dos personagens foi utilizada a API: [rickandmortyAPI](https://rickandmortyapi.com/).
+### Rick and Morty foi desenvolvido para o usuário conseguir visualizar e pesquisar os personagens que já apareceram nesse desenho animado. Para o usuário conseguir visualizar os personagens e as suas informações como o nome, a espécie, primeiro lugar que apareceu e mais outras informações, o usuário pode ir passando pelas páginas do projeto ou pesquisar pelo nome do personagem no campo de busca. O principal objetivo com esse projeto foi praticar e aprimorar minhas habilidade com requisições a APIs externas. Para obter os dados dos personagens foi utilizada a API: [rickandmortyAPI](https://rickandmortyapi.com/).
 
 ### Link para visualização total do projeto: [Clique aqui](https://cute-arithmetic-afc5d4.netlify.app/).
 ---
